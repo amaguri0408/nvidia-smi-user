@@ -2,6 +2,10 @@
 
 This program adds `user` information to the `nvidia-smi` command.
 
+# Environment
+
+Python >= 3.5
+
 # Example
 
 normal `nvidia-smi`
@@ -55,5 +59,26 @@ This program
 # Installation
 
 ```bash
-git clone
+git clone https://github.com/amaguri0408/nvidia-smi-user.git
 ```
+
+# Usage
+
+```
+python3 main.py
+```
+Type 'Ctrl + c' to exit
+
+
+# Note
+
+I recommend adding the following to the `.bashrc`.
+```bash
+alias nvidia-smi='python3 <ABSOLUTE_PATH>'
+```
+or
+```bash
+alias n='python3 <ABSOLUTE_PATH>'
+```
+Restart the shell.
+
