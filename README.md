@@ -67,6 +67,9 @@ git clone https://github.com/amaguri0408/nvidia-smi-user.git
 ```
 python3 main.py
 ```
+option  
+`-n`, `--input`: Update interval (default: 0.5)
+
 Type 'Ctrl + c' to exit
 
 
@@ -82,3 +85,7 @@ alias n='python3 <ABSOLUTE_PATH>'
 ```
 Restart the shell.
 
+If you have registered `alias nvidia-smi='python3 <ABSOLUTE_PATH>'` but want to use the normal `nvidia-smi` command, just add `\` at the beginning
+```
+\nvidia-smi
+```
