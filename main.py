@@ -7,7 +7,7 @@ import argparse
 parser = argparse.ArgumentParser(description="")
 
 default_interval = 0.5
-parser.add_argument('-n', '--interval', default=default_interval, type=int, 
+parser.add_argument('-n', '--interval', default=default_interval, type=float, 
                     help=f"Update interval (default: {default_interval})")
 
 args = parser.parse_args()
@@ -23,6 +23,7 @@ flag = False
 while True:
     try:
         while time.time() < time1 + TIME_N: pass
+        time1 = time.time()
         # GPU使用状況を取得
         smi = subprocess.run(['nvidia-smi'], encoding='utf-8', stdout=subprocess.PIPE)
         smi_list = smi.stdout.split("\n")
