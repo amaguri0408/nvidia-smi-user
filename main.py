@@ -18,6 +18,7 @@ PID_COLUMN = 4
 W_LEN = 10
 TIME_N = args.interval
 
+print()
 time1 = 0
 flag = False
 while True:
@@ -73,7 +74,8 @@ while True:
         # 出力
         print_list = smi_list[:s_idx] + processes_list + smi_list[e_idx:]
         print_list.append(" ")
-        print_list = list(map(lambda x: x + " " * 10, print_list))
+        max_len_line = max(list(map(lambda x: len(x), print_list)))
+        print_list = list(map(lambda x: x + " " * (max_len_line - len(x)), print_list))
         if flag:
             print(f"\033[{len(print_list)}A", end="")
         print("\n".join(print_list))
